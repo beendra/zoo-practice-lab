@@ -1,14 +1,14 @@
-require 'pry'
-
 class Animal
     @@all=[]
-    attr_accessor :name, :zoo 
-    attr_reader :species 
+    
+    attr_accessor :zoo 
+    attr_reader :species, :name, :origin
 
-    def initialize (name, species, zoo)
+    def initialize (name, species, zoo, origin)
         @name = name
         @species = species
         @zoo = zoo
+        @origin = origin
         @@all << self
     end
     # Animal#name should return the name of the animal.
@@ -19,24 +19,24 @@ class Animal
         #binding.pry
     end
 
-    def zoo
-    # Animal#zoo should return the zoo instance that the animal can be found in.
-        
-    end
+    # def zoo
+    # # Animal#zoo should return the zoo instance that the animal can be found in.
+       
+    # end
 
-    def origin
-    # Animal#origin should return the origin instance that the animal can be found in.
-    end
+    # def origin
+    # # Animal#origin should return the origin instance that the animal can be found in.
+    # end
 
     # def species
     # Animal#species should return the species of the animal.
-        # Animal.all {|species|}
-    binding.pry
+        
+    # binding.pry
     # end
 
 
 end
 
 
-binding.pry
-0
+# binding.pry
+# 0

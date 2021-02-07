@@ -1,5 +1,3 @@
-require 'pry'
-
 class Origin
 
     @@all= []
@@ -21,7 +19,11 @@ class Origin
     # Origin#continent should return the name of continent for the origin instance.
 
     # Origin.all should return an array of all the origin instances.
-
+    def origin_animals
+        Animal.all.select do |animal|
+            animal.origin == self
+        end 
+    end
     # Origin#animals should return all the animals that a specific instance of an origin has.
 
     # Origin#zoos should return all the zoos that hold animals of this specific origin.
@@ -35,5 +37,3 @@ class Origin
 
 end
 
-#binding.pry
-0

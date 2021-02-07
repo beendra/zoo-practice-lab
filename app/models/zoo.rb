@@ -1,20 +1,17 @@
-require 'pry'
-
 class Zoo
 
     @@all=[]
-    attr_accessor :name, :origin, :animal
+    attr_accessor :name
     attr_reader :address
 
     def initialize(name, address)
         @name = name
         @address = address
-        # @origin = origin
-        @animal = animal
         @@all << self
     end
 
     def self.all
+        # binding.pry
         @@all
     end
         # binding.pry
@@ -24,11 +21,16 @@ class Zoo
 
     # # Zoo#address should return the address of the zoo instance.
         #  -> It returns the address of the zoo because it's in the macros 
-
+# binding.pry
     def all_animals
+        Animal.all.select do |animal| 
+            binding.pry
+            animal.zoo == self
+        end
+       end
+        
     # # Zoo#all_animals should return all the animals that a specific instance of a zoo has.
-    binding.pry
-    end
+
 
     # def all_animal_species 
     #     # Zoo all_animal_species` should return an array of the unique animal species that a specific instance of a zoo has.
@@ -43,4 +45,3 @@ end
 
 
 # binding.pry
-0
