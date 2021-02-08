@@ -16,7 +16,7 @@ class Animal
     def self.all    
         # Animal.all should return an array of all the animal instances.
         @@all
-        #binding.pry
+        
     end
 
     # def zoo

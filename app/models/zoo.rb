@@ -24,7 +24,7 @@ class Zoo
 # binding.pry
     def all_animals
         Animal.all.select do |animal| 
-            binding.pry
+            # binding.pry
             animal.zoo == self
         end
        end
@@ -45,3 +45,4 @@ end
 
 
 # binding.pry
+# 0
