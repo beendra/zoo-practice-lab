@@ -1,6 +1,7 @@
 class Zoo
 
     @@all=[]
+
     attr_accessor :name
     attr_reader :address
 
@@ -31,15 +32,20 @@ class Zoo
         
     # # Zoo#all_animals should return all the animals that a specific instance of a zoo has.
 
+#     # Zoo all_animal_species` should return an array of the unique animal species that a specific instance of a zoo has.
 
-    # def all_animal_species 
-    #     # Zoo all_animal_species` should return an array of the unique animal species that a specific instance of a zoo has.
-    # end
+    def all_animal_species
+        #binding.pry
+        all_animals.select{|species|species.zoo == self }.uniq
+    end
+  
+ # should take in an argument of a string of a name and return an instance of the zoo.
+     #select enumerable
 
-    # def find_by_name
-    #     # should take in an argument of a string of a name and return an instance of the zoo.
-    #     #select/find enumerable
-    # end
+    def find_by_name(name)
+    binding.pry
+    self.name
+    end
     
 end
 
